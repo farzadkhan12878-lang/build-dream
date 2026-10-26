@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build Dream Assignment</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;color:#333;background:#f6f6f6}
+:root{--orange:#f5a623;--dark:#252b33;--light:#fff}
+
+header{height:72px;background:var(--dark);color:#fff;display:flex;
+align-items:center;justify-content:space-between;padding:0 6%;
+position:sticky;top:0;z-index:10}
+.logo{font-size:28px;font-weight:900}.nav a{color:#fff;text-decoration:none;
+margin-left:22px;font-size:14px}.nav a:hover{color:var(--orange)}
+
+.hero{min-height:650px;padding:70px 6%;display:flex;align-items:center;
+background:linear-gradient(90deg,#20252df0,#20252d55),
+url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600")
+center/cover;color:#fff}
+.hero div{max-width:720px}
+.tag{color:var(--orange);font-weight:bold;letter-spacing:3px}
+h1{font-size:58px;line-height:1.05;margin:18px 0;animation:show 1.5s}
+@keyframes show{0%{opacity:0;transform:translateY(70px) scale(.8)}
+70%{opacity:1;transform:translateY(-8px) scale(1.03)}
+100%{transform:translateY(0) scale(1)}}
+.hero p{font-size:18px;line-height:1.8;color:#eee}
+.btn{border:0;background:var(--orange);padding:15px 25px;
+margin-top:22px;font-weight:bold;cursor:pointer}.btn:hover{transform:scale(1.04)}
+
+.stats{display:flex;justify-content:center;gap:80px;background:#fff;
+padding:30px;text-align:center}.stats b{font-size:28px;color:var(--orange)}
+
+section{padding:70px 6%}.title{text-align:center;margin-bottom:38px}
+.title small{color:#a66c00;font-weight:bold;letter-spacing:2px}
+.title h2{font-size:40px;margin:10px}.title p{max-width:680px;
+margin:auto;color:#777;line-height:1.7}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:10px;overflow:hidden;
+box-shadow:0 5px 18px #0001}.card img{width:100%;height:210px;
+object-fit:cover;transition:.4s}.card:hover img{transform:scale(1.06)}
+.card div{padding:22px}.card h3{font-size:22px;margin-bottom:10px}
+.card p{color:#777;line-height:1.7}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;
+align-items:center;background:var(--dark);color:#fff}
+.about img{width:100%;border-radius:12px}.about p{line-height:1.9;color:#ddd}
+
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:9px}
+.gallery img:first-child{height:452px;grid-row:span 2}
+
+.quote{background:#fff}.form{max-width:650px;margin:auto}
+input,textarea{width:100%;padding:15px;margin:7px 0 13px;
+border:1px solid #ddd}textarea{height:130px}
+
+.faq{max-width:800px;margin:auto}
+details{background:#fff;margin:10px 0;padding:18px;border-radius:7px}
+summary{font-weight:bold;cursor:pointer}
+
+.test{background:var(--orange);text-align:center;color:#222}
+.test p{max-width:700px;margin:15px auto;line-height:1.8;font-style:italic}
+
+footer{background:#252b33;color:#ddd;padding:50px 6%;
+display:grid;grid-template-columns:1fr 1fr;gap:30px}
+footer h2,footer h3{color:#fff;margin-bottom:15px}
+footer p{line-height:1.8}
+
+@media(max-width:700px){
+.nav{display:none}h1{font-size:40px}.hero{min-height:600px}
+.grid,.about,.gallery,footer{grid-template-columns:1fr}
+.gallery img,.gallery img:first-child{height:220px;grid-row:auto}
+.stats{gap:20px}.stats b{font-size:22px}
+.title h2{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">BUILD DREAM</div>
+<nav class="nav">
+<a href="#home">Home</a><a href="#services">Services</a>
+<a href="#projects">Projects</a><a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<div>
+<span class="tag">BUILD • DESIGN • CREATE</span>
+<h1>WE BUILD YOUR <span style="color:#f5a623">DREAM</span></h1>
+<p>
+We create modern homes, commercial buildings and beautiful spaces
+with reliable construction, thoughtful design and attention to every
+important detail. From the first idea to the final finish, our goal
+is to turn your vision into a strong and lasting reality.
+</p>
+<button class="btn" onclick="go()">GET A QUOTE →</button>
+</div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+<div><b>25+</b><br>Years Experience</div>
+<div><b>180+</b><br>Projects</div>
+<div><b>98%</b><br>Happy Clients</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="title">
+<small>WHAT WE DO</small>
+<h2>Our Services</h2>
+<p>
+From complete construction to renovation and professional finishing,
+we provide practical solutions for different types of projects.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800">
+<div><h3>🏠 Home Building</h3>
+<p>Modern residential construction with comfortable layouts,
+quality materials and clean finishing.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800">
+<div><h3>🏢 Commercial Buildings</h3>
+<p>Professional spaces designed for businesses, offices,
+shops and growing organizations.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800">
+<div><h3>🔨 Renovation</h3>
+<p>Upgrade old spaces with fresh designs, improved layouts
+and modern finishing solutions.</p></div>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000">
+<div>
+<span class="tag">ABOUT BUILD DREAM</span>
+<h2 style="font-size:42px;margin:15px 0">Built With Quality & Care</h2>
+<p>
+Build Dream brings together creative planning, practical engineering
+and skilled workmanship. We believe a successful project is not only
+about how it looks, but also about durability, functionality and
+attention to detail.
+</p>
+<button class="btn" onclick="go()">START A PROJECT →</button>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="projects">
+<div class="title">
+<small>PROJECT GALLERY</small>
+<h2>Our Recent Work</h2>
+<p>Take a look at some modern construction, architecture and
+development ideas from our project collection.</p>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700">
+<img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700">
+<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700">
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="title">
+<small>FEATURED PROJECTS</small>
+<h2>Latest Builds</h2>
+</div>
+
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800">
+<div><h3>Modern Residence</h3>
+<p>A contemporary home designed with clean architecture,
+open spaces and comfortable interiors.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800">
+<div><h3>Business Office</h3>
+<p>A modern workspace planned for productivity, comfort
+and professional presentation.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800">
+<div><h3>City Development</h3>
+<p>A large construction concept combining structure,
+functionality and modern architectural ideas.</p></div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="test">
+<h2>What Our Clients Say</h2>
+<p>
+“Build Dream made the entire construction process simple and clear.
+The team focused on quality, communication and details from beginning
+to completion.”
+</p>
+<b>— Happy Client</b>
+</section>
+
+<!-- FAQ -->
+<section>
+<div class="title">
+<small>FAQ</small>
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq">
+<details><summary>What type of projects do you handle?</summary>
+<p>We cover residential construction, commercial spaces,
+renovation and general building projects.</p></details>
+
+<details><summary>Can I request a project estimate?</summary>
+<p>Yes. Use the quote form below and provide basic information
+about your project.</p></details>
+
+<details><summary>Do you work on renovation projects?</summary>
+<p>Yes. Renovation and space improvement are included among
+our main services.</p></details>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="quote" id="contact">
+<div class="title">
+<small>START YOUR PROJECT</small>
+<h2>Request A Quote</h2>
+<p>Tell us a little about your project and send your enquiry.</p>
+</div>
+
+<div class="form">
+<input placeholder="Your Name">
+<input placeholder="Email Address">
+<input placeholder="Project Type">
+<textarea placeholder="Tell us about your project"></textarea>
+<button class="btn" onclick="send()">SEND MESSAGE →</button>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div>
+<h2>BUILD DREAM</h2>
+<p>
+Smart construction, creative design and dependable workmanship.
+We create spaces that are practical, modern and made to last.
+</p>
+</div>
+
+<div>
+<h3>Contact Us</h3>
+<p>
+📍 San Francisco, California<br>
+📞 +1 415 555 0142<br>
+✉ info@builddream.com
+</p>
+</div>
+</footer>
+
+<script>
+function go(){
+document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+}
+function send(){
+alert("Thank you! Your message has been received.");
+}
+</script>
+
+</body>
+</html>
